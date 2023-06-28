@@ -1,0 +1,603 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Koin",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 278843618139895
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 691053546649290
+				}
+			],
+			"actions": [
+				{
+					"id": "set-image-offset-x",
+					"objectClass": "Background",
+					"sid": 771347745588618,
+					"parameters": {
+						"offset-x": "Self.ImageOffsetX -2.5"
+					}
+				}
+			],
+			"sid": 722565953007267
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 347390171756033,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 192577464151819,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				},
+				{
+					"id": "set-gravity",
+					"objectClass": "Player",
+					"sid": 270143297339886,
+					"behaviorType": "Platform",
+					"parameters": {
+						"gravity": "850"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Player",
+					"sid": 346020091062753,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				}
+			],
+			"sid": 107393496493022
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Keyboard",
+					"sid": 782298599222063,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-gravity",
+					"objectClass": "Player",
+					"sid": 544583361772794,
+					"behaviorType": "Platform",
+					"parameters": {
+						"gravity": "1500"
+					}
+				}
+			],
+			"sid": 670750146741697
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-landed",
+					"objectClass": "Player",
+					"sid": 530379690676836,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-gravity",
+					"objectClass": "Player",
+					"sid": 282493530133127,
+					"behaviorType": "Platform",
+					"parameters": {
+						"gravity": "850"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "Player",
+					"sid": 302215862349147,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "200"
+					}
+				}
+			],
+			"sid": 870408698546763
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "MainEnemy",
+					"sid": 915238495262789,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 762906681128628
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 417836328471524,
+					"parameters": {
+						"layout": "Layout Gameover"
+					}
+				}
+			],
+			"sid": 407877965765281
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemy1",
+					"sid": 751850154594987,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 383989276287318
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 654412398704113,
+					"parameters": {
+						"layout": "Layout Gameover"
+					}
+				}
+			],
+			"sid": 770730701381123
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "GameOver",
+					"sid": 130549729418598,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 684086907043407
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 181834543611662,
+					"parameters": {
+						"layout": "Layout Gameover"
+					}
+				}
+			],
+			"sid": 685695558203017
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "MainEnemy",
+					"sid": 194098360525565,
+					"parameters": {
+						"object": "Enemy1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Enemy1",
+					"sid": 768990765252325
+				}
+			],
+			"sid": 232834764481824
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "MainEnemy",
+					"sid": 857765181791258,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 305814597883376
+				}
+			],
+			"sid": 271273307091660
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 978077635364037,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 980847582243493
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 103098168498591,
+					"parameters": {
+						"variable": "Koin",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TextScore",
+					"sid": 744034620316190,
+					"parameters": {
+						"text": "\"Koin : \"&Koin"
+					}
+				}
+			],
+			"sid": 591418218899100
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 343292957173321,
+					"parameters": {
+						"interval-seconds": "random(5) + 1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Spawner1",
+					"sid": 111256848371323,
+					"parameters": {
+						"object": "Coin",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 113317616027058
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 519497038291701,
+					"parameters": {
+						"interval-seconds": "random(7,15) + 1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Spawner2",
+					"sid": 172088606935909,
+					"parameters": {
+						"object": "Enemy1",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 520464237360624
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 203181744824901,
+					"parameters": {
+						"interval-seconds": "random(1,3) + 1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Spawner3",
+					"sid": 937655371794645,
+					"parameters": {
+						"object": "GroundType1",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 926473036841878
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Destroyer",
+					"sid": 376212791618383,
+					"parameters": {
+						"object": "GroundType1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "GroundType1",
+					"sid": 270160155566868
+				}
+			],
+			"sid": 713696834859030
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 468832076973594,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 166046683147422,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 977826448040560,
+					"parameters": {
+						"time-scale": "0"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 543429840764659,
+					"parameters": {
+						"layer": "1",
+						"interactive": true
+					}
+				}
+			],
+			"sid": 819768930011606
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 164563482714242,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TextExitMenu"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 151516755332787,
+					"parameters": {
+						"layout": "Layout Mainmenu"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 515991873829398,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 497982702658722,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 940699988472954,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 300810401570859
+				}
+			],
+			"sid": 436772628214436
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 239387742737775,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TextRestart"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 530807201539770
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 563614875529241,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 449170421414400,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 534364881217284,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 500503701179370
+				}
+			],
+			"sid": 573714375277428
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 289111388705710,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "TextResume"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 876406010710402,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 173210650825118,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 508202514054088,
+					"parameters": {
+						"layer": "1",
+						"interactive": false
+					}
+				}
+			],
+			"sid": 371806888125352
+		}
+	],
+	"sid": 153639383045827
+}

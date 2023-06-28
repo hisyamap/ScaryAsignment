@@ -1,0 +1,15 @@
+{
+	"name": "TextExitMenu",
+	"plugin-id": "Text",
+	"sid": 177865700672842,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 353062003254729
+		}
+	],
+	"effectTypes": []
+}

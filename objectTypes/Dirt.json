@@ -1,0 +1,26 @@
+{
+	"name": "Dirt",
+	"plugin-id": "TiledBg",
+	"sid": 906328153691775,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 251485783423220
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 320,
+		"height": 205,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 2871094,
+		"useCollisionPoly": true
+	}
+}

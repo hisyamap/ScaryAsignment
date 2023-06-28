@@ -1,0 +1,15 @@
+{
+	"name": "TextResume",
+	"plugin-id": "Text",
+	"sid": 797163528789060,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 542972335699733
+		}
+	],
+	"effectTypes": []
+}

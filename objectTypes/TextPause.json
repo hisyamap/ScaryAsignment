@@ -1,0 +1,15 @@
+{
+	"name": "TextPause",
+	"plugin-id": "Text",
+	"sid": 780612185469861,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 755361276568407
+		}
+	],
+	"effectTypes": []
+}
